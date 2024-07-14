@@ -1,0 +1,10 @@
+<div class="movie-card">
+    <a routerLink="/moviecards" class="fas fa-angle-left a_back"></a>
+    <img [src]="movieCard.backdrop_path" [alt]="movieCard.title" class="back">
+    <!-- attribute binding (liaison par attribut) -->
+    <h1>{{ movieCard.title }} <span>({{ movieCard.release_date | date:'yyyy-MM-dd' }})</span></h1>
+    <!-- <img [src]="movieCard.imageUrl" [alt]="movieCard.title" class="front"> -->
+    <p>{{ movieCard.overview }}</p>
+    <a href="https://www.youtube.com/results?search_query={{movieCard.title}}+trailer" target="_blank"
+        class="a_trailer">Trailer</a>
+</div>

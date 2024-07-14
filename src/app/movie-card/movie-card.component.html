@@ -1,0 +1,4 @@
+<div class="movie-card" (click)="onViewMovieCard()">
+    <img [src]="movieCard.poster_path" [alt]="movieCard.title"
+        onerror="this.onerror=null;this.src='assets/images/not-found.jpeg'">
+</div>

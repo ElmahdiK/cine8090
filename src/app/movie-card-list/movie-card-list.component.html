@@ -1,0 +1,8 @@
+<nav>
+   <button (click)="onPreviewPage()" class="fas fa-angle-left" [disabled]="currentPage===1"></button>
+   <p>{{ currentPage +" / "+ totalPages }}</p>
+   <button (click)="onNextPage()" class="fas fa-angle-right" [disabled]="currentPage===totalPages"></button>
+</nav>
+<div class="movie-card-list">
+   <app-movie-card *ngFor="let movieCard of movieCards" [movieCard]="movieCard"></app-movie-card>
+</div>

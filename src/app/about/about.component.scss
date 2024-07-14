@@ -1,0 +1,17 @@
+.div-about {
+    background-color: #fff;
+    box-shadow: 4px 4px 20px #ccc;
+    width: calc(50% - 80px);
+    padding: 40px;
+    margin: 0 auto;
+    nav a {
+        background-color: #e1f5fe;
+        color: #1565c0;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 4px;
+        font-size: 12px;
+        text-transform: lowercase;
+        display: inline-block;
+    }
+}

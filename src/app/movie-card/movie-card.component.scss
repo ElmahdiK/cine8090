@@ -1,0 +1,66 @@
+.movie-card {
+    // box-shadow: 4px 4px 20px #ccc;
+    border:1px solid #eee;
+    // width:calc(100% - 40%);
+    padding:10%;
+    margin:10%;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover{
+        background-color: #fff;
+        box-shadow: 4px 4px 20px #64b5f6;
+        border:1px solid dodgerblue;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        vertical-align: top;
+        // filter: contrast(0.8);
+        // transform: scale(0.9);
+        // transition: 0.2s;
+        // &:hover{
+        //     // filter: contrast(1.2);
+        //     transform: scale(1);
+        // }
+    }
+    p{
+        padding:10px 0px;
+    }
+    .p_bottom{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    animation-name: animateUp;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    display: flex;
+}
+
+/* -- animation -- */
+.animateUp {
+    animation-name: animateUp;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    display: flex;
+}
+
+@keyframes animateUp {
+    0% {
+        background-color: var(--colorGRAY);
+        transform: translateY(-10px) translateX(0px);
+        border-radius: 0% 0% 100% 100% / 100% 0% 100% 0%;
+    }
+    100% {
+        background-color: #fff;
+        transform: translateY(0px) translateX(0px);
+        border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%;
+    }
+}
