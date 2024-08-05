@@ -105,6 +105,9 @@
             "browserTarget": "cine8090:build"
           }
         },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -126,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "cine8090"
+  "defaultProject": "cine8090",
+  "cli": {
+    "analytics": false
+  }
 }
