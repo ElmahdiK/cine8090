@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: true,\n  apiKey: '9dab8961889d0466186fa72c081bb27b'\n};","map":null,"metadata":{},"sourceType":"module"}
