@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { MovieCard } from '../models/movie-card.model';
-import { HttpClient } from '@angular/common/http';
-import { from, Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
+import { Injectable } from "@angular/core";
+import { MovieCard } from "../models/movie-card.model";
+import { HttpClient } from "@angular/common/http";
+import { from, Observable } from "rxjs";
+import { environment } from "../../environments/environment";
 
 // le decorateur "Injectable" est la façon la plus simple pour déclarer une classe comme étant un service
 
@@ -10,19 +10,14 @@ import { environment } from '../../environments/environment';
 // qu'il y a aura qu'une seule instance de ce service et que donc toute l'application partagera les mêmes données et la même logique
 // En effet, ce sera très souvent le cas pour vos services, car ça permet de s'assurer de n'avoir qu'une seule instance du service, partagée par tous les partis intéressés.
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class MovieCardsService {
   result: MovieCard[] = [];
   API_KEY: string = environment.apiKey;
   BASE_URL: string = `https://api.themoviedb.org/3`;
   IMG_URL: string = `https://image.tmdb.org/t/p/w500`;
-  //QUERY: string = `primary_release_date.gte=1980-01-01&primary_release_date.lte=1999-12-31`;
-  /*
 
-ex: What is are the best movies from 1980?
-URL: https://api.themoviedb.org/3/discover/movie?primary_release_year=1980&sort_by=vote_average.desc&api_key=d744e12bfd78a041826aede766e68d5f
-*/
   QUERY: string = `with_companies=2&with_genres=16&primary_release_date.gte=1980-01-01&primary_release_date.lte=1999-12-31`;
   endpointURL: string = `${this.BASE_URL}/discover/movie?api_key=${this.API_KEY}&${this.QUERY}&sort_by=primary_release_date.desc`;
   movieCards: MovieCard[] = [];
@@ -176,12 +171,12 @@ URL: https://api.themoviedb.org/3/discover/movie?primary_release_year=1980&sort_
         }*/
 
   getMovieCardById(movieCardId: number): MovieCard {
-    console.log('ok', movieCardId, this.movieCards);
+    console.log("ok", movieCardId, this.movieCards);
 
     const movieCard = this.movieCards.find(
       (movieCard) => movieCard.id === movieCardId
     );
-    if (!movieCard) throw new Error('MovieCard not found!');
+    if (!movieCard) throw new Error("MovieCard not found!");
     else return movieCard;
   }
 
