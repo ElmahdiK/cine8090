@@ -125,4 +125,4 @@ out
 .yarn/install-state.gz
 .pnp.*
 .DS_Store
-.angular
+.angular.DS_Store
