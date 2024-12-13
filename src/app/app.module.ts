@@ -8,16 +8,16 @@ import { registerLocaleData } from '@angular/common';
 import * as fr from '@angular/common/locales/fr';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
-import { SingleMovieCardComponent } from './single-movie-card/single-movie-card.component';
-import { MovieCardComponent } from './movie-card/movie-card.component';
-import { MovieCardListComponent } from './movie-card-list/movie-card-list.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { SingleMovieCardComponent } from './components/single-movie-card/single-movie-card.component';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { MovieCardListComponent } from './components/movie-card-list/movie-card-list.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [

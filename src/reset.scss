@@ -1,0 +1,71 @@
+/* ==================================================================
+   RESET CSS (Baseline Reset)
+   ================================================================== */
+
+/* Réinitialiser la mise en page par défaut des marges et des espacements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Réinitialiser les styles des éléments de type bloc */
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #333; /* Couleur de texte par défaut */
+  background-color: #fff; /* Couleur de fond par défaut */
+}
+
+/* Éléments de liste */
+ul, ol {
+  list-style: none;
+}
+
+/* Réinitialisation des liens */
+a {
+  text-decoration: none; /* Pas de soulignement par défaut */
+  color: inherit; /* Hérite de la couleur du parent */
+}
+
+/* Réinitialisation des images */
+img {
+  max-width: 100%; /* Assurer que les images ne débordent pas de leurs conteneurs */
+  height: auto;
+  display: block; /* Retirer les espacements sous les images */
+}
+
+/* Réinitialisation des tableaux */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Réinitialisation des formulaires */
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+/* Pour les boutons : supprimer les styles par défaut */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Suppression du focus (si nécessaire) */
+*:focus {
+  outline: none;
+}

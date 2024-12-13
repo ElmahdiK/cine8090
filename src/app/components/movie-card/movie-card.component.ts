@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MovieCard } from '../models/movie-card.model';
-import { MovieCardsService } from '../services/movie-cards.service';
+import { Movie } from '../../models/movie.model';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -9,17 +9,17 @@ import { MovieCardsService } from '../services/movie-cards.service';
   styleUrls: ['./movie-card.component.scss'],
 })
 export class MovieCardComponent implements OnInit {
-  @Input() movieCard!: MovieCard;
+  @Input() movieCard!: Movie;
 
   constructor(
-    private movieCardsService: MovieCardsService,
+   // private movieService: MovieService,
     private router: Router
   ) {}
 
   ngOnInit(): void {}
 
   onViewMovieCard() {
-    // this.movieCardsService.currentPage=12;
+    // this.movieService.currentPage=12;
     this.router.navigateByUrl(`moviecards/${this.movieCard.id}`);
   }
 }

@@ -1,0 +1,14 @@
+<div class="movie-card">
+    <a routerLink="/moviecards" class="fas fa-angle-left a_back"></a>
+    <iframe *ngIf="movieTrailerKey; else showImage" [src]="movieTrailerKey" frameborder="0" class="youtube-iframe"
+        height="300" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+    <ng-template #showImage>
+        <img *ngIf="movieCard.backdrop_path" [src]="movieCard.backdrop_path" [alt]="movieCard.title" class="back">
+    </ng-template>
+    <!-- attribute binding (liaison par attribut) -->
+    <h1>{{ movieCard.title }} <span>({{ movieCard.release_date | date:'yyyy-MM-dd' }})</span></h1>
+    <p>{{ movieCard.overview }}</p>
+    <!-- <a href="https://www.youtube.com/results?search_query={{movieCard.title}}+trailer" target="_blank"
+        class="a_trailer">SEE TRAILER</a> -->
+</div>
