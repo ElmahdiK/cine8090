@@ -1,5 +1,9 @@
 # MovieCard
 
+Pour déployer le projet : https://v17.angular.io/guide/deployment
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
 
 ## Development server
